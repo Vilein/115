@@ -15,21 +15,21 @@ public class UserServiceImpl implements UserService {
         userHIb.createUsersTable();
     }
 
-    public void dropUsersTable() { userDao.dropUsersTable(); }
+    public void dropUsersTable() { userHIb.dropUsersTable(); }
 
     public void saveUser(String name, String lastName, byte age) {
-        userDao.saveUser(name, lastName, age);
+        userHIb.saveUser(name, lastName, age);
     }
 
     public void removeUserById(long id) {
-        userDao.removeUserById(id);
+        userHIb.removeUserById(id);
     }
 
     public List<User> getAllUsers() {
-        return userDao.getAllUsers();
+        return userHIb.getAllUsers();
     }
 
     public void cleanUsersTable() {
-        userDao.cleanUsersTable();
+        userHIb.cleanUsersTable();
     }
 }
